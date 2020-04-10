@@ -40,5 +40,9 @@ public class MessageStepDefinitions {
     public void verify_that_file_is_uploaded() {
         BrowserUtils.waitForVisibility(messagePage.file,20);
         Assert.assertTrue(messagePage.file.isDisplayed());
+
+
+        System.out.println("Conflict Practice");
     }
+
 }
