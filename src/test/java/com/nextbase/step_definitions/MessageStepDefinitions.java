@@ -40,9 +40,9 @@ public class MessageStepDefinitions {
         } catch (IOException e)
         {            e.printStackTrace();
         }
-        System.out.println("============");
-        System.out.println("============");
-        System.out.println("============");
+        System.out.println("Conflict");
+        System.out.println("Conflict");
+        System.out.println("Conflict");
 
         BrowserUtils.wait(3);
     }
