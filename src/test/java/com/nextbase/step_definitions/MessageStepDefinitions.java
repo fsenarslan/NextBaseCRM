@@ -6,6 +6,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.io.IOException;
+
 
 public class MessageStepDefinitions {
 
@@ -28,11 +30,18 @@ public class MessageStepDefinitions {
     }
     @When("user clicks upload files button")
     public void user_clicks_upload_files_button() {
+        BrowserUtils.clickWithJS(messagePage.uploadfiles);
+        BrowserUtils.wait(3);
     }
 
     @When("user upload the file")
     public void user_upload_the_file() {
+        try {            Runtime.getRuntime().exec("C:\\Users\\dhtor\\Desktop\\New folder\\FileUploud.exe");
+        } catch (IOException e)
+        {            e.printStackTrace();
+        }
         messagePage.uploadfiles.sendKeys(System.getProperty("user.dir")+"/testfile.txt");
+
         BrowserUtils.wait(3);
     }
 
@@ -40,5 +49,10 @@ public class MessageStepDefinitions {
     public void verify_that_file_is_uploaded() {
         BrowserUtils.waitForVisibility(messagePage.file,20);
         Assert.assertTrue(messagePage.file.isDisplayed());
+
+
+        System.out.println("new changes added");
+
     }
+
 }
