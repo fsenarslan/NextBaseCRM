@@ -40,7 +40,9 @@ public class MessageStepDefinitions {
         } catch (IOException e)
         {            e.printStackTrace();
         }
-        messagePage.uploadfiles.sendKeys(System.getProperty("user.dir")+"/testfile.txt");
+        System.out.println("============");
+        System.out.println("============");
+        System.out.println("============");
 
         BrowserUtils.wait(3);
     }
