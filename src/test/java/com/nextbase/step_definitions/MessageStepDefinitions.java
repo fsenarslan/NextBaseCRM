@@ -51,7 +51,9 @@ public class MessageStepDefinitions {
         Assert.assertTrue(messagePage.file.isDisplayed());
 
 
+
         System.out.println("new changes added");
+        System.out.println("Conflict Practice");
 
     }
 
