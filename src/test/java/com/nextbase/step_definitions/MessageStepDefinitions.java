@@ -52,11 +52,11 @@ public class MessageStepDefinitions {
         BrowserUtils.waitForVisibility(messagePage.file,20);
         Assert.assertTrue(messagePage.file.isDisplayed());
 
-        System.out.println("============");
-        System.out.println("============");
-        System.out.println("============");
-        System.out.println("============");
-        System.out.println("============");
-    }
-}
 
+
+        System.out.println("new changes added");
+        System.out.println("Conflict Practice");
+
+    }
+
+}
