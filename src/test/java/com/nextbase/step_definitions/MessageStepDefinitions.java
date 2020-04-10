@@ -40,7 +40,9 @@ public class MessageStepDefinitions {
         } catch (IOException e)
         {            e.printStackTrace();
         }
-        messagePage.uploadfiles.sendKeys(System.getProperty("user.dir")+"/testfile.txt");
+        System.out.println("============");
+        System.out.println("============");
+        System.out.println("============");
 
         BrowserUtils.wait(3);
     }
@@ -49,5 +51,12 @@ public class MessageStepDefinitions {
     public void verify_that_file_is_uploaded() {
         BrowserUtils.waitForVisibility(messagePage.file,20);
         Assert.assertTrue(messagePage.file.isDisplayed());
+
+        System.out.println("============");
+        System.out.println("============");
+        System.out.println("============");
+        System.out.println("============");
+        System.out.println("============");
     }
 }
+
