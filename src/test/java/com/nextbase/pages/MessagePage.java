@@ -31,6 +31,17 @@ public class MessagePage {
     @FindBy(xpath = "//span[@class='f-wrap']")
     public WebElement file;
 
+    @FindBy(xpath = "//span[@class='bxhtmled-top-bar-btn bxhtmled-button-video']//i")
+    public WebElement insertVideoButton;
+
+    @FindBy(id = "video_idPostFormLHE_blogPostForm-source")
+    public WebElement videoIcon;
+
+    @FindBy(xpath = " //input[@id='']")
+    public WebElement saveButton;
+
+
+
     public MessagePage() {
         PageFactory.initElements(Driver.get(),this);
     }
