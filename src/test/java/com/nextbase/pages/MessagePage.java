@@ -31,6 +31,38 @@ public class MessagePage {
     @FindBy(xpath = "//span[@class='f-wrap']")
     public WebElement file;
 
+
+
+
+
+
+
+    @FindBy(css = "[title=\"Link\"]")
+    public WebElement linkButton;
+
+    @FindBy(css = "#linkidPostFormLHE_blogPostForm-text")
+    public WebElement linkText;
+
+    @FindBy(css = "#linkidPostFormLHE_blogPostForm-href")
+    public WebElement linkUrl;
+
+    @FindBy(css = "[class=\"adm-btn-save\"]")
+    public WebElement linkSaveButton;
+
+    @FindBy(id = "blog-submit-button-save")
+    public WebElement sendButton;
+
+    @FindBy(xpath = "//div[@id='blog_post_body_487']//a[contains(text(),'Link to Amazon')]")
+    public WebElement verifyLink;
+
+
+
+
+
+
+
+
+
     public MessagePage() {
         PageFactory.initElements(Driver.get(),this);
     }
