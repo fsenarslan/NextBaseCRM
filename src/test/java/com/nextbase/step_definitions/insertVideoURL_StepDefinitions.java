@@ -2,9 +2,12 @@ package com.nextbase.step_definitions;
 
 import com.nextbase.pages.MessagePage;
 import com.nextbase.utilities.BrowserUtils;
+import com.nextbase.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+
 
 public class insertVideoURL_StepDefinitions {
 
@@ -14,29 +17,29 @@ public class insertVideoURL_StepDefinitions {
     public void user_clicks_video_insert_button() {
         BrowserUtils.wait(3);
         messagePage.insertVideoButton.click();
-
     }
 
     @When("user enter the video URL in the video icon")
     public void user_enter_the_video_URL_in_the_video_icon() {
-        messagePage.videoIcon.sendKeys("https://www.youtube.com/watch?v=f1wnYdLEpgI&feature=youtu.be");
-        BrowserUtils.wait(20);
+        messagePage.videoIcon.sendKeys("https://www.youtube.com/watch?v=668nUCeBHyY");
+        BrowserUtils.wait(3);
     }
 
-    @Then("verify the video title")
-    public void verify_the_video_title() {
+    @When("user clicks the video save button")
+    public void user_clicks_the_video_save_button() {
+        messagePage.videoSaveButton.click();
+    }
 
-         messagePage.saveButton.click();
-
+    @When("user clicks the send button")
+    public void user_clicks_the_send_button() {
+        messagePage.sendButton.click();
+        BrowserUtils.wait(3);
     }
 
     @Then("verify that video URL is entered")
     public void verify_that_video_URL_is_entered() {
 
-        String expectedURL = "https://www.youtube.com/watch?v=QJqNYhiHysM";
-        String actualURL = messagePage.videoIcon.getText();
-        System.out.println(actualURL);
-
-        Assert.assertEquals( expectedURL,actualURL);
+        Assert.assertTrue(messagePage.verifyVideo.isDisplayed());
     }
+
 }

@@ -8,14 +8,6 @@ Feature:Send Message
     When user clicks message button
     And user clicks video insert button
     And user enter the video URL in the video icon
-    Then verify the video title
-#   Then verify that video URL is entered
-
-#  @FindBy(xpath = "//span[@class='bxhtmled-top-bar-btn bxhtmled-button-video']//i")
-#  public WebElement insertVideoButton;
-#
-#  @FindBy(id = "video_idPostFormLHE_blogPostForm-source")
-#  public WebElement videoIcon;
-#
-#  @FindBy(xpath = " //input[@id='']")
-#  public WebElement saveButton;
+    And user clicks the video save button
+    And user clicks the send button
+   Then verify that video URL is entered

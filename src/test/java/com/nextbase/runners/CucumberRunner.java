@@ -11,6 +11,7 @@ import org.junit.runner.RunWith;
         glue = "com/nextbase/step_definitions",
         dryRun = false,
         tags = "@insert_video_URL",
+       // tags = "@link_upload",
         plugin = {"html:target/default-cucumber-reports",
                 "json:target/cucumber.json"}
 )

@@ -31,15 +31,38 @@ public class MessagePage {
     @FindBy(xpath = "//span[@class='f-wrap']")
     public WebElement file;
 
+    @FindBy(css = "[title=\"Link\"]")
+    public WebElement linkButton;
+
+    @FindBy(css = "#linkidPostFormLHE_blogPostForm-text")
+    public WebElement linkText;
+
+    @FindBy(css = "#linkidPostFormLHE_blogPostForm-href")
+    public WebElement linkUrl;
+
+    @FindBy(css = "[class=\"adm-btn-save\"]")
+    public WebElement linkSaveButton;
+
+    @FindBy(id = "blog-submit-button-save")
+    public WebElement sendButton;
+
+    @FindBy(xpath = "//div[@id='blog_post_body_487']//a[contains(text(),'Link to Amazon')]")
+    public WebElement verifyLink;
+
     @FindBy(xpath = "//span[@class='bxhtmled-top-bar-btn bxhtmled-button-video']//i")
     public WebElement insertVideoButton;
 
     @FindBy(id = "video_idPostFormLHE_blogPostForm-source")
     public WebElement videoIcon;
 
-    @FindBy(xpath = " //input[@id='']")
-    public WebElement saveButton;
+    @FindBy(css= "[id='undefined']")
+    public WebElement videoSaveButton;
 
+    @FindBy(css = "(//div[@class='feed-add-post-text'])[1]")
+    public WebElement verifyVideo;
+
+//    @FindBy(className = ".bx-editor-iframe")
+//    public WebElement videoIframe;
 
 
     public MessagePage() {

@@ -18,3 +18,14 @@ Feature:Send Message
     Then Verify that file is uploaded
 
 
+
+   @link_upload
+   Scenario: Verify that link uploaded
+     And user clicks link button
+     And user insert link name
+     And user upload the link
+     And user clicks the save button
+     Then Verify that upload link
+
+
+
