@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 
 public class MessagePage {
 
@@ -19,23 +21,22 @@ public class MessagePage {
     @FindBy(xpath = "//input[@name='bxu_files[]']") //send keys is available
     public WebElement uploadfiles;
 
-    @FindBy(xpath = "(//span[@class='wd-fa-add-file-light-title-text diskuf-selector-link'])[1]")
-    public WebElement selectDocument;
+    @FindBy(xpath="//div[@class='feed-add-post-form-wrap']//tr[1]//td[1]")
+    public WebElement uploadfiles2;
 
-    @FindBy(xpath = "(//span[text()='Download from external drive'])[1]")
-   public WebElement downloadDocument
-            ;
-    @FindBy(xpath = "(//span[text()='Desktop applications'])[1]")
+    @FindBy(xpath = "//div[@class='feed-add-post-form-wrap']//tr[1]//td[3]")
+    public WebElement selectDocument;//(//span[@class='wd-fa-add-file-light-title-text diskuf-selector-link'])[1]
+
+    @FindBy(xpath = "//div[@class='feed-add-post-form-wrap']//tr[3]//td[1]")
+    public WebElement downloadDocument;
+
+    @FindBy(xpath = "//div[@class='feed-add-post-form-wrap']//tr[3]//td[3]")
     public WebElement desktopApplication;
 
     @FindBy(xpath = "//span[@class='f-wrap']")
     public WebElement file;
 
-
-
-
-
-
+    //file upload element
 
     @FindBy(css = "[title=\"Link\"]")
     public WebElement linkButton;
@@ -52,13 +53,65 @@ public class MessagePage {
     @FindBy(id = "blog-submit-button-save")
     public WebElement sendButton;
 
-  //  @FindBy(xpath = "//div[@id='blog_post_body_487']//a[contains(text(),'link last')]")
-   @FindBy(css="[id=\"log_internal_container\"]")
+    @FindBy(partialLinkText = "link35")
     public WebElement verifyLink;
 
 
+    //add more elements
 
+    @FindBy(linkText = "Add more")
+    public WebElement addMore;
 
+    @FindBy(xpath = "//div[@class='bx-finder-box-tabs']//a")
+    public List<WebElement> options;
+
+    @FindBy(css = "[data-type='groups']")
+    public WebElement allEmployees;
+
+    @FindBy(css="[id*='destLast']")
+    public WebElement recent;
+
+    @FindBy(id="destDepartmentTab_destination5102068")
+    public WebElement employeesAndDepartments;
+
+    @FindBy(id="destEmailTab_destination5102068")
+    public WebElement eMailUsers;
+
+    @FindBy(className = "[id='feed-add-post-destination-input']")
+    public WebElement toInbox;
+
+    //video elements
+
+    @FindBy(xpath = "//span[@class='bxhtmled-top-bar-btn bxhtmled-button-video']//i")
+    public WebElement insertVideoButton;
+
+    @FindBy(id = "video_idPostFormLHE_blogPostForm-source")
+    public WebElement videoIcon;
+
+    @FindBy(css= "[id='undefined']")
+    public WebElement videoSaveButton;
+
+    @FindBy(css = "(//div[@class='feed-add-post-text'])[1]")
+    public WebElement verifyVideo;
+
+    @FindBy(xpath = "//label[.='Video title:']")
+    public WebElement videoTitle;
+
+   //Quate elements
+
+    @FindBy(css = "[title=\"Quote text\"]")
+    public WebElement quoteButton;
+
+    @FindBy(css="[class='bx-editor-iframe']")
+    public  WebElement iframe;
+
+    @FindBy(css = "[class='bxhtmled-quote']")
+    public WebElement quoteFrame;
+
+    ////div[@id="blg-post-507"]tum message bloc
+
+    @FindBy(css= "[id=\"log_internal_container\"]")
+    public WebElement blocquote;
 
 
 
@@ -69,8 +122,8 @@ public class MessagePage {
     }
 
     public void verifyElements(){
-        BrowserUtils.waitForVisibility(uploadfiles, 5);
-        Assert.assertTrue(uploadfiles.isDisplayed());
+        BrowserUtils.waitForVisibility(uploadfiles2, 10);
+        Assert.assertTrue(uploadfiles2.isDisplayed());
         BrowserUtils.waitForVisibility(selectDocument, 5);
         Assert.assertTrue(selectDocument.isDisplayed());
         BrowserUtils.waitForVisibility(downloadDocument, 5);
