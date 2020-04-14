@@ -96,7 +96,7 @@ public class MessageStepDefinitions {
                 .ignoring(StaleElementReferenceException.class)
                 .ignoring(WebDriverException.class);
         WebElement element = (WebElement) wait.until((Function<WebDriver, WebElement>) driver -> messagePage.verifyLink);
-     //   Assert.assertEquals(messagePage.verifyLink.getText(),"Link to Amazon");
+        Assert.assertEquals(messagePage.verifyLink.getText(),"Link to Amazon");
         Assert.assertTrue(messagePage.verifyLink.isDisplayed());
         BrowserUtils.wait(3);
     }

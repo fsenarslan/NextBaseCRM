@@ -79,9 +79,20 @@ public class MessagePage {
     @FindBy(className = "[id='feed-add-post-destination-input']")
     public WebElement toInbox;
 
+    @FindBy(xpath = "//span[@class='bxhtmled-top-bar-btn bxhtmled-button-video']//i")
+    public WebElement insertVideoButton;
 
+    @FindBy(id = "video_idPostFormLHE_blogPostForm-source")
+    public WebElement videoIcon;
 
+    @FindBy(css= "[id='undefined']")
+    public WebElement videoSaveButton;
 
+    @FindBy(css = "(//div[@class='feed-add-post-text'])[1]")
+    public WebElement verifyVideo;
+
+    @FindBy(xpath = "//label[.='Video title:']")
+    public WebElement videoTitle;
 
     public MessagePage() {
         PageFactory.initElements(Driver.get(),this);
