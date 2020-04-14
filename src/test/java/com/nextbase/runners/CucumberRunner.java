@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "com/nextbase/step_definitions",
-        dryRun = true,
-        tags = "@add_contacts",
+        dryRun = false,
+        tags = "@Quate",
         plugin = {"html:target/default-cucumber-reports",
                 "json:target/cucumber.json"}
 )

@@ -35,6 +35,7 @@ public class MessageStepDefinitions {
         BrowserUtils.wait(5);
         messagePage.verifyElements();
     }
+
     @When("user clicks upload files button")
     public void user_clicks_upload_files_button() {
 //        BrowserUtils.clickWithJS(messagePage.uploadfiles);
@@ -49,7 +50,7 @@ public class MessageStepDefinitions {
 //            e.printStackTrace();
 //        }
 
-        messagePage.uploadfiles.sendKeys(System.getProperty("user.dir")+"/testfile.txt");
+        messagePage.uploadfiles.sendKeys(System.getProperty("user.dir")+"Book2.xlsx");
         BrowserUtils.wait(3);
     }
 
@@ -96,6 +97,7 @@ public class MessageStepDefinitions {
                 .ignoring(StaleElementReferenceException.class)
                 .ignoring(WebDriverException.class);
         WebElement element = (WebElement) wait.until((Function<WebDriver, WebElement>) driver -> messagePage.verifyLink);
+
         Assert.assertEquals(messagePage.verifyLink.getText(),"Link to Amazon");
         Assert.assertTrue(messagePage.verifyLink.isDisplayed());
         BrowserUtils.wait(3);

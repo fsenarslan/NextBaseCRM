@@ -56,6 +56,7 @@ public class MessagePage {
     @FindBy(partialLinkText = "link35")
     public WebElement verifyLink;
 
+
     //add more elements
 
     @FindBy(linkText = "Add more")
@@ -79,6 +80,8 @@ public class MessagePage {
     @FindBy(className = "[id='feed-add-post-destination-input']")
     public WebElement toInbox;
 
+    //video elements
+
     @FindBy(xpath = "//span[@class='bxhtmled-top-bar-btn bxhtmled-button-video']//i")
     public WebElement insertVideoButton;
 
@@ -93,6 +96,26 @@ public class MessagePage {
 
     @FindBy(xpath = "//label[.='Video title:']")
     public WebElement videoTitle;
+
+   //Quate elements
+
+    @FindBy(css = "[title=\"Quote text\"]")
+    public WebElement quoteButton;
+
+    @FindBy(css="[class='bx-editor-iframe']")
+    public  WebElement iframe;
+
+    @FindBy(css = "[class='bxhtmled-quote']")
+    public WebElement quoteFrame;
+
+    ////div[@id="blg-post-507"]tum message bloc
+
+    @FindBy(css= "[id=\"log_internal_container\"]")
+    public WebElement blocquote;
+
+
+
+
 
     public MessagePage() {
         PageFactory.initElements(Driver.get(),this);
