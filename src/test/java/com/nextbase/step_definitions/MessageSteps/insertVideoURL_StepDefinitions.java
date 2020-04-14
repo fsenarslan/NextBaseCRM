@@ -1,4 +1,4 @@
-package com.nextbase.step_definitions;
+package com.nextbase.step_definitions.MessageSteps;
 
 import com.nextbase.pages.MessagePage;
 import com.nextbase.utilities.BrowserUtils;

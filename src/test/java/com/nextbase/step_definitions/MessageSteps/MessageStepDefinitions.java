@@ -1,4 +1,4 @@
-package com.nextbase.step_definitions;
+package com.nextbase.step_definitions.MessageSteps;
 
 import com.nextbase.pages.MessagePage;
 import com.nextbase.utilities.BrowserUtils;
@@ -32,6 +32,7 @@ public class MessageStepDefinitions {
 
     @Then("user verifies that elements are displayed")
     public void user_verifies_that_elements_are_displayed() {
+        BrowserUtils.wait(5);
         messagePage.verifyElements();
     }
     @When("user clicks upload files button")
@@ -67,7 +68,7 @@ public class MessageStepDefinitions {
     @When("user insert link name")
     public void user_insert_link_name() {
 
-        messagePage.linkText.sendKeys("Link to Amazon");
+        messagePage.linkText.sendKeys("Amazon link35");
    //     BrowserUtils.wait(2);
     }
 
