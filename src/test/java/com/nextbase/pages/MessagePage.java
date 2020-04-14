@@ -61,8 +61,8 @@ public class MessagePage {
     @FindBy(css = "(//div[@class='feed-add-post-text'])[1]")
     public WebElement verifyVideo;
 
-//    @FindBy(className = ".bx-editor-iframe")
-//    public WebElement videoIframe;
+    @FindBy(xpath = "//label[.='Video title:']")
+    public WebElement videoTitle;
 
 
     public MessagePage() {
