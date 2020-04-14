@@ -1,4 +1,4 @@
-package com.nextbase.step_definitions.MessageSteps;
+package com.nextbase.step_definitions;
 
 import com.nextbase.pages.MessagePage;
 import com.nextbase.utilities.BrowserUtils;
@@ -27,7 +27,7 @@ public class insertVideoURL_StepDefinitions {
 
     @When("user clicks the video save button")
     public void user_clicks_the_video_save_button() {
-     //   BrowserUtils.waitForPresenceOfElement(By.cssSelector("input[xpath=\"1\"]"),20);
+        //   BrowserUtils.waitForPresenceOfElement(By.cssSelector("input[xpath=\"1\"]"),20);
         BrowserUtils.wait(20);
         messagePage.videoSaveButton.click();
     }
@@ -43,5 +43,6 @@ public class insertVideoURL_StepDefinitions {
 
         Assert.assertTrue(messagePage.verifyVideo.isDisplayed());
     }
+
 
 }
