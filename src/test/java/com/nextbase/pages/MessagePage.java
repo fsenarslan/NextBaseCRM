@@ -23,8 +23,8 @@ public class MessagePage {
     public WebElement selectDocument;
 
     @FindBy(xpath = "(//span[text()='Download from external drive'])[1]")
-    public WebElement downloadDocument;
-
+   public WebElement downloadDocument
+            ;
     @FindBy(xpath = "(//span[text()='Desktop applications'])[1]")
     public WebElement desktopApplication;
 
@@ -52,7 +52,8 @@ public class MessagePage {
     @FindBy(id = "blog-submit-button-save")
     public WebElement sendButton;
 
-    @FindBy(xpath = "//div[@id='blog_post_body_487']//a[contains(text(),'Link to Amazon')]")
+  //  @FindBy(xpath = "//div[@id='blog_post_body_487']//a[contains(text(),'link last')]")
+   @FindBy(css="[id=\"log_internal_container\"]")
     public WebElement verifyLink;
 
 
@@ -68,13 +69,13 @@ public class MessagePage {
     }
 
     public void verifyElements(){
-        //BrowserUtils.waitForVisibility(uploadfiles, 5);
+        BrowserUtils.waitForVisibility(uploadfiles, 5);
         Assert.assertTrue(uploadfiles.isDisplayed());
-        //BrowserUtils.waitForVisibility(selectDocument, 5);
+        BrowserUtils.waitForVisibility(selectDocument, 5);
         Assert.assertTrue(selectDocument.isDisplayed());
-        //BrowserUtils.waitForVisibility(downloadDocument, 5);
+        BrowserUtils.waitForVisibility(downloadDocument, 5);
         Assert.assertTrue(downloadDocument.isDisplayed());
-        //BrowserUtils.waitForVisibility(desktopApplication, 5);
+        BrowserUtils.waitForVisibility(desktopApplication, 5);
         Assert.assertTrue(desktopApplication.isDisplayed());
     }
 
