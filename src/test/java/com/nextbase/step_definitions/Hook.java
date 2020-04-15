@@ -7,13 +7,15 @@ import io.cucumber.java.Before;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
+import java.util.concurrent.TimeUnit;
+
 //import java.util.concurrent.TimeUnit;
 
 public class Hook {
     @Before
     public void setup(){
         Driver.get().manage().window().maximize();
-        //Driver.get().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+      //  Driver.get().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
     @After
