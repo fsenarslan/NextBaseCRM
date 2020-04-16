@@ -128,7 +128,7 @@ public class MessagePage {
     @FindBy(xpath = "//div[@class='bx-finder-company-department-employee-name'][contains(text(),'marketing2@cybertekschool.com')]")
     public WebElement usersMailAddress;
 
-    @FindBy(partialLinkText = "Help")
+    @FindBy(xpath = "//a[contains(text(),'hr55@cybertekschool.com')]")
     public WebElement checkMessage;
 
 
