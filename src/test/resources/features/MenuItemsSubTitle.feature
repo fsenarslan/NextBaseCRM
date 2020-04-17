@@ -7,8 +7,6 @@ Feature: Page SubTitle
     When user navigates to "<module>"
     Then page subtitle should be "<subTitle>"
 
-
-
     Examples:
       | role            | module           | subTitle                   |
       | Human Resources | Activity Stream  | Activity Stream            |
@@ -21,3 +19,4 @@ Feature: Page SubTitle
       | Human Resources | Employees        | Company Structure          |
       | Human Resources | Services         | Meeting Rooms              |
       | Human Resources | Company          | Company                    |
+
