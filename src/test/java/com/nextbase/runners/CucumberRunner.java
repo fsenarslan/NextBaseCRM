@@ -9,11 +9,10 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "com/nextbase/step_definitions",
-        dryRun =false,
-        tags = " @choosingFont ",
+        dryRun = false,
+        tags = "@Menu_Items",
         plugin = {"html:target/default-cucumber-reports",
                 "json:target/cucumber.json"}
 )
 public class CucumberRunner{
 }
-
