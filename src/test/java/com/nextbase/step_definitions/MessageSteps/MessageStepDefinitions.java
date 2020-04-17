@@ -50,7 +50,7 @@ public class MessageStepDefinitions {
 //            e.printStackTrace();
 //        }
 
-        messagePage.uploadfiles.sendKeys(System.getProperty("user.dir")+"Book2.xlsx");
+        messagePage.uploadfiles.sendKeys(System.getProperty("user.dir")+"fileupload.exe");
         BrowserUtils.wait(3);
     }
 

@@ -61,4 +61,23 @@ public class BrowserUtils {
             element.click();
         }
     }
+    // Waits for element to be not stale
+    public static void waitForStaleElement(WebElement element) {
+        int y = 0;
+        while (y <= 15) {
+            try {
+                element.isDisplayed();
+                break;
+            } catch (StaleElementReferenceException st) {
+                y++;
+                try {
+                    Thread.sleep(200);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            break;
+        }
+    }
+
 }
