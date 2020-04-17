@@ -65,8 +65,11 @@ public class MessagePage {
     @FindBy(xpath = "//div[@class='bx-finder-box-tabs']//a")
     public List<WebElement> options;
 
-    @FindBy(css = "[data-type='groups']")
+    @FindBy(className = "feed-add-post-del-but")
     public WebElement allEmployees;
+
+    @FindBy(xpath = "//a[@id='bx-destination-tag']")
+    public WebElement addEmployer;
 
     @FindBy(css="[id*='destLast']")
     public WebElement recent;
@@ -77,7 +80,7 @@ public class MessagePage {
     @FindBy(id="destEmailTab_destination5102068")
     public WebElement eMailUsers;
 
-    @FindBy(className = "[id='feed-add-post-destination-input']")
+    @FindBy(className = "(//input[@class='feed-add-destination-inp'])[1]")
     public WebElement toInbox;
 
     //video elements
@@ -128,7 +131,7 @@ public class MessagePage {
     @FindBy(xpath = "//div[@class='bx-finder-company-department-employee-name'][contains(text(),'marketing2@cybertekschool.com')]")
     public WebElement usersMailAddress;
 
-    @FindBy(partialLinkText = "Help")
+    @FindBy(xpath = "//div[@class='feed-wrap']/child::div[@class='feed-item-wrap'][1]/child::div[@class='feed-post-block feed-post-block-short feed-post-block-separator']")
     public WebElement checkMessage;
 
 
