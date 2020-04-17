@@ -114,7 +114,25 @@ public class MessagePage {
     public WebElement blocquote;
 
 
+    //add mention
 
+    @FindBy(xpath = "//span[@id='bx-b-mention-blogPostForm']")
+    public WebElement mentionButton;
+
+    @FindBy(css = "[class=\"bx-finder-box-tab bx-lm-tab-department\"]")
+    public WebElement selectContactButton;
+
+    @FindBy(xpath = "//div[contains(text(),'Cyber Vet')]")
+    public WebElement cyberVetButton;
+
+    @FindBy(xpath = "//div[@class='bx-finder-company-department-employee-name'][contains(text(),'marketing2@cybertekschool.com')]")
+    public WebElement usersMailAddress;
+
+    @FindBy(partialLinkText = "Help")
+    public WebElement checkMessage;
+
+
+//div[contains(text(),'Cyber Vet')]
 
 
     public MessagePage() {
