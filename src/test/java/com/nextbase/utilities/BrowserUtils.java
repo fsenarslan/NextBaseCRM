@@ -48,8 +48,8 @@ public class BrowserUtils {
                 .ignoring(ElementClickInterceptedException.class)
                 .ignoring(StaleElementReferenceException.class)
                 .ignoring(WebDriverException.class);
-            WebElement element = (WebElement) wait.until((Function<WebDriver, WebElement>) driver -> webElement);
-            try {
+        WebElement element = (WebElement) wait.until((Function<WebDriver, WebElement>) driver -> webElement);
+        try {
             element.click();
         } catch (WebDriverException e) {
             System.out.println(e.getMessage());
@@ -61,7 +61,6 @@ public class BrowserUtils {
             element.click();
         }
     }
-
     // Waits for element to be not stale
     public static void waitForStaleElement(WebElement element) {
         int y = 0;
