@@ -156,16 +156,25 @@ public class MessagePage {
         fileUploadButton.click();
     }
 //Text Editor
-    @FindBy(css="[id=\"lhe_button_editor_blogPostForm\"]")
+     @FindBy(css="[id=\"lhe_button_editor_blogPostForm\"]")
      public WebElement editorButton;
 
      @FindBy(css="#bx-html-editor-tlbr-idPostFormLHE_blogPostForm")
       public WebElement editorToolBar;
 
      @FindBy(xpath = "//span[contains(text(),'Font')]")
-    public WebElement fontButton;
+     public WebElement fontButton;
 
-    @FindBy(className="popup-window popup-window-content-no-paddings popup-window-with-titlebar")
-    public List<WebElement> fontOptions;
+     @FindBy(className="popup-window popup-window-content-no-paddings popup-window-with-titlebar")
+     public List<WebElement> fontOptions;
+
+//Titles
+
+      @FindBy(linkText = "Tasks")
+      public WebElement tasksLink;
+
+     @FindBy(css="#bx-component-scope-bitrix_tasks_interface_topmenu_1")
+      public WebElement subModules;
+
 
 }
