@@ -50,7 +50,7 @@ public class MessageStepDefinitions {
 //            e.printStackTrace();
 //        }
 
-        messagePage.uploadfiles.sendKeys(System.getProperty("user.dir")+"fileupload.exe");
+        messagePage.uploadfiles.sendKeys(System.getProperty("user.dir")+"testfile.txt");
         BrowserUtils.wait(3);
     }
 

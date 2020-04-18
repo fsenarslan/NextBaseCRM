@@ -5,12 +5,10 @@ Feature: Page SubTitle
     Given User is on the login page
     And User logs in as "<role>"
     When user navigates to "<module>"
-    Then page subtitle should be "<subTitle>"
-
-
+    Then page subtitle should be "<pageTitle>"
 
     Examples:
-      | role            | module           | subTitle                   |
+      | role            | module           | pageTitle                  |
       | Human Resources | Activity Stream  | Activity Stream            |
       | Human Resources | Tasks            | My tasks                   |
       | Human Resources | Workgroups       | Workgroups and projects    |
@@ -21,3 +19,4 @@ Feature: Page SubTitle
       | Human Resources | Employees        | Company Structure          |
       | Human Resources | Services         | Meeting Rooms              |
       | Human Resources | Company          | Company                    |
+

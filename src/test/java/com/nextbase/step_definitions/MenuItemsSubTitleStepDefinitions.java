@@ -11,6 +11,7 @@ public class MenuItemsSubTitleStepDefinitions {
 
     @When("user navigates to {string}")
     public void user_navigates_to(String menuItem) {
+
         loginPage.menuNavigation(menuItem);
     }
 
