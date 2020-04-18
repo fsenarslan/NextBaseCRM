@@ -3,7 +3,7 @@ Feature: Page SubTitle
 
   Scenario Outline: Login as <role> and verify page SubTitle
     Given User is on the login page
-    And User logs in as "<role>"
+    And User logs in as "<role>"git
     When user navigates to "<module>"
     Then page subtitle should be "<pageTitle>"
 

@@ -11,3 +11,4 @@ Feature:Send Message
     And user clicks the video save button
     And user clicks send button
     Then verify that video URL is entered
+

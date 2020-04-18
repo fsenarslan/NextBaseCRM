@@ -29,7 +29,6 @@ public class InsertVideoStepDefinitions {
         messagePage.videoSaveButton.click();
     }
 
-
     @Then("verify that video URL is entered")
     public void verify_that_video_URL_is_entered() {
 

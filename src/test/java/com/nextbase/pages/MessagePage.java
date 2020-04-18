@@ -50,7 +50,7 @@ public class MessagePage {
     @FindBy(css = "[class=\"adm-btn-save\"]")
     public WebElement linkSaveButton;
 
-    @FindBy(id = "blog-submit-button-save")
+    @FindBy(css = "[id='blog-submit-button-save']")
     public WebElement sendButton;
 
     @FindBy(partialLinkText = "link35")
@@ -125,14 +125,17 @@ public class MessagePage {
     @FindBy(css = "[class=\"bx-finder-box-tab bx-lm-tab-department\"]")
     public WebElement selectContactButton;
 
-    @FindBy(xpath = "//div[contains(text(),'Cyber Vet')]")
-    public WebElement cyberVetButton;
+    @FindBy(id = "popup-window-content-invite-email-email-user-popup")
+    public WebElement emailPopUp;
 
     @FindBy(xpath = "//div[@class='bx-finder-company-department-employee-name'][contains(text(),'marketing2@cybertekschool.com')]")
     public WebElement usersMailAddress;
 
     @FindBy(xpath = "//div[@class='feed-wrap']/child::div[@class='feed-item-wrap'][1]/child::div[@class='feed-post-block feed-post-block-short feed-post-block-separator']")
     public WebElement checkMessage;
+
+    @FindBy(css="[class='popup-window-close-icon']")
+    public WebElement emailPopUpClose;
 
 
 
