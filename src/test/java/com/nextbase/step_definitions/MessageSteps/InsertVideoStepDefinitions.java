@@ -29,12 +29,6 @@ public class InsertVideoStepDefinitions {
         messagePage.videoSaveButton.click();
     }
 
-    @When("user clicks the send button")
-    public void user_clicks_the_send_button() {
-        messagePage.sendButton.click();
-        BrowserUtils.wait(5);
-    }
-
     @Then("verify that video URL is entered")
     public void verify_that_video_URL_is_entered() {
 
