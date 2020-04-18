@@ -80,7 +80,7 @@ public class MessagePage {
     @FindBy(id="destEmailTab_destination5102068")
     public WebElement eMailUsers;
 
-    @FindBy(className = "(//input[@class='feed-add-destination-inp'])[1]")
+    @FindBy(xpath = "//input[@id='feed-add-post-destination-input']")
     public WebElement toInbox;
 
     //video elements
