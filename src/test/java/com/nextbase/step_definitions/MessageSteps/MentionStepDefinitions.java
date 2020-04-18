@@ -17,20 +17,7 @@ public class MentionStepDefinitions {
     MessagePage messagePage = new MessagePage();
     Faker faker = new Faker();
 
-    @When("user enter a fake email")
-    public void user_enter_a_fake_email() {
-        String email = faker.internet().emailAddress();
-        BrowserUtils.waitForVisibility(messagePage.allEmployees,10);
-        messagePage.allEmployees.click();
-        BrowserUtils.wait(2);
-        BrowserUtils.waitForVisibility(messagePage.addEmployer,10);
-        messagePage.addEmployer.click();
-        BrowserUtils.waitForVisibility(messagePage.toInbox,10);
-        BrowserUtils.wait(3);
-        messagePage.toInbox.clear();
-        messagePage.toInbox.sendKeys(email, Keys.ENTER);
-        BrowserUtils.wait(3);
-    }
+
 
     @When("user clicks mention button")
     public void user_clicks_mention_button() {
@@ -62,6 +49,23 @@ public class MentionStepDefinitions {
         BrowserUtils.wait(3);
     }
 
+    @When("user enter a fake email")
+    public void user_enter_a_fake_email() {
+        String email = faker.internet().emailAddress();
+        BrowserUtils.waitForVisibility(messagePage.allEmployees,10);
+        messagePage.allEmployees.click();
+        BrowserUtils.wait(2);
+        BrowserUtils.waitForVisibility(messagePage.addEmployer,10);
+        messagePage.addEmployer.click();
+        BrowserUtils.waitForVisibility(messagePage.toInbox,10);
+        BrowserUtils.wait(3);
+        messagePage.toInbox.clear();
+        messagePage.toInbox.sendKeys(email, Keys.ENTER);
+        BrowserUtils.wait(3);
+    }
+
+
+
     @Then("verify that mention is displayed")
     public void verify_that_mention_is_displayed() {
         BrowserUtils.waitForVisibility(messagePage.sendButton,10);
@@ -70,6 +74,8 @@ public class MentionStepDefinitions {
         Assert.assertTrue(messagePage.checkMessage.isDisplayed());
         BrowserUtils.wait(5);
     }
+
+
 
 
 }
