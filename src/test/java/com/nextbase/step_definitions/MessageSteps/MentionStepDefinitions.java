@@ -1,10 +1,12 @@
 package com.nextbase.step_definitions.MessageSteps;
 
+import com.github.javafaker.Faker;
 import com.nextbase.pages.MessagePage;
 import com.nextbase.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,6 +15,22 @@ import java.util.List;
 public class MentionStepDefinitions {
 
     MessagePage messagePage = new MessagePage();
+    Faker faker = new Faker();
+
+    @When("user enter a fake email")
+    public void user_enter_a_fake_email() {
+        String email = faker.internet().emailAddress();
+        BrowserUtils.waitForVisibility(messagePage.allEmployees,10);
+        messagePage.allEmployees.click();
+        BrowserUtils.wait(2);
+        BrowserUtils.waitForVisibility(messagePage.addEmployer,10);
+        messagePage.addEmployer.click();
+        BrowserUtils.waitForVisibility(messagePage.toInbox,10);
+        BrowserUtils.wait(3);
+        messagePage.toInbox.clear();
+        messagePage.toInbox.sendKeys(email, Keys.ENTER);
+        BrowserUtils.wait(3);
+    }
 
     @When("user clicks mention button")
     public void user_clicks_mention_button() {

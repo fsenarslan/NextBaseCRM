@@ -5,6 +5,7 @@ Feature: user
     Given User is on the login page
     And User logs in as Human Resources
     When user clicks message button
+    And user enter a fake email
 
    @mention
    Scenario: User add mention successfully
