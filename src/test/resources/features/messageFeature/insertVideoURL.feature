@@ -9,6 +9,6 @@ Feature:Send Message
     And user clicks video insert button
     And user enter the video URL in the video icon
     And user clicks the video save button
-    And user clicks the send button
+    And user clicks send button
     Then verify that video URL is entered
 

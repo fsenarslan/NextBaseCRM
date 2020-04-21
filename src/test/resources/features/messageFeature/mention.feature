@@ -11,7 +11,6 @@ Feature: user
    Scenario: User add mention successfully
      And user clicks mention button
      When user clicks contact button
-#     And user clicks cyberVet button
      And user choose mail address
      And user enter a fake email
      Then verify that mention is displayed
