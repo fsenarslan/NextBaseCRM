@@ -1,5 +1,6 @@
 package com.nextbase.utilities;
 
+import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -7,6 +8,9 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.function.Function;
 
 public class BrowserUtils {
@@ -31,7 +35,7 @@ public class BrowserUtils {
         new WebDriverWait(Driver.get(), time).until(ExpectedConditions.presenceOfElementLocated(by));
     }
 
-    public static void clickWithJS(WebElement element) {
+        public static void clickWithJS(WebElement element) {
 
         JavascriptExecutor js = ((JavascriptExecutor) Driver.get());
         js.executeScript("arguments[0].scrollIntoView(true);", element);
@@ -79,5 +83,30 @@ public class BrowserUtils {
             break;
         }
     }
+
+    public static List<String> getListOfString(List<WebElement> listOfWebElements) {
+
+            List<String> listOfStrings = new ArrayList<>();
+        for (WebElement element : listOfWebElements) {
+            String value = element.getText().trim();
+            //if there is no text
+            //do not add this blank text into list
+            if (value.length() > 0) {
+                listOfStrings.add(value);
+            }
+        }
+
+        return listOfStrings;
+
+
+    }
+
+    public static void getTextElements(String name){
+        WebElement documentExternal = Driver.get().findElement(By.cssSelector("[title='" + name + "']"));
+            waitForVisibility(documentExternal,10);
+             Assert.assertTrue(documentExternal.isDisplayed());
+        System.out.println(documentExternal.getText());
+    }
+
 
 }
