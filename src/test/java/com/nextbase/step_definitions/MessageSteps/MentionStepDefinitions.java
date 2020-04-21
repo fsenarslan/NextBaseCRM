@@ -31,12 +31,12 @@ public class MentionStepDefinitions {
 //        BrowserUtils.waitForClickablility(messagePage.selectContactButton,10);
 //        messagePage.selectContactButton.click();
 //        BrowserUtils.wait(3);
-       // BrowserUtils.clickWithJS(messagePage.selectContactButton);
+//        BrowserUtils.clickWithJS(messagePage.selectContactButton);
         BrowserUtils.wait(3);
     }
 
 //    @When("user clicks cyberVet button")
-//    public void user_clicks_cyberVet_button() {
+//        public void user_clicks_cyberVet_button() {
 //        BrowserUtils.waitForVisibility(messagePage.cyberVetButton,10);
 //        messagePage.cyberVetButton.click();
 //        BrowserUtils.wait(3);
