@@ -1,6 +1,5 @@
 package com.nextbase.runners;
 
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -10,9 +9,9 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/nextbase/step_definitions",
         dryRun = false,
-        tags = "@insert_video_URL",
+
         plugin = {"html:target/default-cucumber-reports",
                 "json:target/cucumber.json"}
 )
-public class CucumberRunner{
+public class RegressionRunner{
 }

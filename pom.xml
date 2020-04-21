@@ -48,10 +48,8 @@
             <version>1.0.1</version>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -64,7 +62,6 @@
                     <testFailureIgnore>false</testFailureIgnore>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
@@ -87,12 +84,9 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
-
     </build>
     <profiles>
-
         <profile>
             <id>Regression</id>
             <build>
@@ -104,7 +98,7 @@
                         <configuration>
                             <parallel>methods</parallel>
                             <perCoreThreadCount>false</perCoreThreadCount>
-                            <threadCountMethods>2</threadCountMethods>
+                            <threadCountMethods>4</threadCountMethods>
                             <includes>
                                 <include>**/RegressionRunner.java</include>
                             </includes>
@@ -114,23 +108,54 @@
                 </plugins>
             </build>
         </profile>
-
     </profiles>
-
-<!--    <build>-->
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-surefire-plugin</artifactId>-->
-<!--                <version>3.0.0-M3</version>-->
-<!--                <configuration>-->
-<!--                    <runOrder>Alphabetical</runOrder>-->
-<!--                    <includes>-->
-<!--                        <include>**/CucumberRunner.java</include>-->
-<!--                    </includes>-->
-<!--                    <testFailureIgnore>true</testFailureIgnore>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
-<!--    </build>-->
+    <!--    <build>-->
+    <!--        <plugins>-->
+    <!--            <plugin>-->
+    <!--                <groupId>net.masterthought</groupId>-->
+    <!--                <artifactId>maven-cucumber-reporting</artifactId>-->
+    <!--                <version>4.9.0</version>-->
+    <!--                <executions>-->
+    <!--                    <execution>-->
+    <!--                        <id>execution</id>-->
+    <!--                        <phase>verify</phase>-->
+    <!--                        <goals>-->
+    <!--                            <goal>generate</goal>-->
+    <!--                        </goals>-->
+    <!--                        <configuration>-->
+    <!--                            <projectName>Cucumber HTML Reports</projectName>-->
+    <!--                            <outputDirectory>${project.build.directory}</outputDirectory>-->
+    <!--                            <inputDirectory>${project.build.directory}</inputDirectory>-->
+    <!--                            <jsonFiles>-->
+    <!--                                <param>**/cucumber*.json</param>-->
+    <!--                            </jsonFiles>-->
+    <!--                        </configuration>-->
+    <!--                    </execution>-->
+    <!--                </executions>-->
+    <!--            </plugin>-->
+    <!--        </plugins>-->
+    <!--    </build>-->
+    <!--    <profiles>-->
+    <!--        <profile>-->
+    <!--            <id>Regression</id>-->
+    <!--            <build>-->
+    <!--                <plugins>-->
+    <!--                    <plugin>-->
+    <!--                        <groupId>org.apache.maven.plugins</groupId>-->
+    <!--                        <artifactId>maven-surefire-plugin</artifactId>-->
+    <!--                        <version>3.0.0-M3</version>-->
+    <!--                        <configuration>-->
+    <!--                            <parallel>methods</parallel>-->
+    <!--                            <perCoreThreadCount>false</perCoreThreadCount>-->
+    <!--                            <threadCountMethods>2</threadCountMethods>-->
+    <!--                            <includes>-->
+    <!--                                <include>**/RegressionRunner.java</include>-->
+    <!--                            </includes>-->
+    <!--                            <testFailureIgnore>true</testFailureIgnore>-->
+    <!--                        </configuration>-->
+    <!--                    </plugin>-->
+    <!--                </plugins>-->
+    <!--            </build>-->
+    <!--        </profile>-->
+    <!--    </profiles>-->
 </project>

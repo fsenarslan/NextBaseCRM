@@ -2,7 +2,6 @@ package com.nextbase.step_definitions.MessageSteps;
 
 import com.github.javafaker.Faker;
 import com.nextbase.pages.MessagePage;
-import com.nextbase.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -11,8 +10,6 @@ public class MentionStepDefinitions {
 
     MessagePage messagePage = new MessagePage();
     Faker faker = new Faker();
-
-
 
     @When("user clicks mention button")
     public void user_clicks_mention_button() {
@@ -58,7 +55,7 @@ public class MentionStepDefinitions {
     public void verify_that_mention_is_displayed() {
         BrowserUtils.waitForVisibility(messagePage.sendButton,10);
         messagePage.sendButton.click();
-        BrowserUtils.waitForVisibility(messagePage.checkMessage,15);
+        BrowserUtils.waitForStaleElement(messagePage.checkMessage);
         Assert.assertTrue(messagePage.checkMessage.isDisplayed());
         BrowserUtils.wait(5);
     }
