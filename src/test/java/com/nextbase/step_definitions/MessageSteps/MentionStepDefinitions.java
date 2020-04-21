@@ -12,8 +12,6 @@ public class MentionStepDefinitions {
     MessagePage messagePage = new MessagePage();
     Faker faker = new Faker();
 
-
-
     @When("user clicks mention button")
     public void user_clicks_mention_button() {
         BrowserUtils.waitForVisibility(messagePage.mentionButton,10);
@@ -58,7 +56,7 @@ public class MentionStepDefinitions {
     public void verify_that_mention_is_displayed() {
         BrowserUtils.waitForVisibility(messagePage.sendButton,10);
         messagePage.sendButton.click();
-        BrowserUtils.waitForVisibility(messagePage.checkMessage,15);
+        BrowserUtils.waitForStaleElement(messagePage.checkMessage);
         Assert.assertTrue(messagePage.checkMessage.isDisplayed());
         BrowserUtils.wait(5);
     }
