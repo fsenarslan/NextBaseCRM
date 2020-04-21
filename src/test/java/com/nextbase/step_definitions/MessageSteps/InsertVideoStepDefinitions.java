@@ -18,7 +18,7 @@ public class InsertVideoStepDefinitions {
 
     @When("user enter the video URL in the video icon")
     public void user_enter_the_video_URL_in_the_video_icon() {
-        messagePage.videoIcon.sendKeys("https://www.youtube.com/watch?v=oWySXqcCcxQ");
+        messagePage.videoIcon.sendKeys("https://www.youtube.com/watch?v=ZRGTrGvUrUs");
         BrowserUtils.wait(3);
     }
 
@@ -31,8 +31,8 @@ public class InsertVideoStepDefinitions {
 
     @Then("verify that video URL is entered")
     public void verify_that_video_URL_is_entered() {
-
-//        Assert.assertTrue(messagePage.verifyVideo.isDisplayed());
+        BrowserUtils.wait(4);
+       Assert.assertTrue(messagePage.verifyVideo.isDisplayed());
     }
 
 }

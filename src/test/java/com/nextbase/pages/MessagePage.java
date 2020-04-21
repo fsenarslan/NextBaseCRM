@@ -94,7 +94,7 @@ public class MessagePage {
     @FindBy(css= "[id='undefined']")
     public WebElement videoSaveButton;
 
-    @FindBy(css = "(//div[@class='feed-add-post-text'])[1]")
+    @FindBy(id = "bxid536702023")
     public WebElement verifyVideo;
 
     @FindBy(xpath = "//label[.='Video title:']")
