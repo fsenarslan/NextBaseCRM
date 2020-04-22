@@ -14,17 +14,11 @@ import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
-
 import java.net.URL;
-
-
 public class Driver {
     private static ThreadLocal<WebDriver> driverPool = new ThreadLocal<>();
-
     private Driver() {
-
     }
-
     public static WebDriver get() {
         //if this thread doesn't have a web driver yet - create it and add to pool
         if (driverPool.get() == null) {
@@ -89,21 +83,17 @@ public class Driver {
                         e.printStackTrace();
                     }
                     break;
-
                 default:
                     throw new RuntimeException("Invalid browser name!");
             }
         }
-        //return corresponded to thread id webdriver object
         return driverPool.get();
     }
-
     public static void close() {
         driverPool.get().quit();
         driverPool.remove();
     }
 }
-
 //Bizim yaptigimiz
 //    private static ThreadLocal<WebDriver> driverPool= new ThreadLocal<>();
 //
@@ -125,7 +115,6 @@ public class Driver {
 //            driverPool.remove();
 //    }
 //}
-
 //    public static WebDriver get(){
 //
 //        if(driver == null) {
