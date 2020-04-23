@@ -9,10 +9,11 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "com/nextbase/step_definitions",
-        dryRun =false,
-        tags = "@video_record",
+        dryRun = false,
+        tags = "@login",
         plugin = {"html:target/default-cucumber-reports",
-                "json:target/cucumber.json"}
+                "json:target/cucumber.json",
+                "rerun:target/rerun.txt"}
 )
 public class CucumberRunner{
 }

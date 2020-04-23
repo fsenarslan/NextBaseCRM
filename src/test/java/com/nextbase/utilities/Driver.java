@@ -87,7 +87,6 @@ public class Driver {
                     throw new RuntimeException("Invalid browser name!");
             }
         }
-        //return corresponded to thread id webdriver object
         return driverPool.get();
     }
     public static void close() {

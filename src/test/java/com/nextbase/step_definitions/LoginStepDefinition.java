@@ -19,6 +19,7 @@ public class LoginStepDefinition {
     public void user_logs_in_as_Human_Resources() {
         loginPage.login();
     }
+
     @When("User logs in as {string}")
     public void user_logs_in_as(String role) {
         loginPage.login(role);
