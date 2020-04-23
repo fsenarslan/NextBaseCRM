@@ -1,6 +1,7 @@
 package com.nextbase.step_definitions.MessageSteps;
 
 import com.nextbase.pages.MessagePage;
+import com.nextbase.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
