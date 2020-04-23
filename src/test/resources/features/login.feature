@@ -6,7 +6,7 @@ As a user I should be able to login
   Scenario: Login as a Human Resources
     Given User is on the login page
     When User logs in as Human Resources
-    Then Verify that page title is "Portal"
+    Then Verify that page title is "Portal1"
 
 
   @login_with_different_credentials
