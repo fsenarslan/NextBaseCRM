@@ -189,6 +189,18 @@ public class MessagePage extends BasePage {
     public WebElement emailPopUpClose;
 
 
+    ///////////video Record ////////////////
+
+    @FindBy(xpath = "//div[@id='divoPostFormLHE_blogPostForm']//span[@class='feed-add-post-form-but-cnt feed-add-videomessage'][contains(text(),'Record Video')]")
+    public WebElement videoRecordButton;
+
+    @FindBy(css = "[class=\"popup-window-button popup-window-button-blue\"]")
+    public WebElement allowVideoRecordButton;
+
+    @FindBy(id = "popup-window-content-bx-popup-videomessage-popup")
+    public WebElement videoRecordFailsText;
+
+
 //div[contains(text(),'Cyber Vet')]
 
 
