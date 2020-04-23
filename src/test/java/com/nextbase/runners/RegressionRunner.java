@@ -11,7 +11,8 @@ import org.junit.runner.RunWith;
         dryRun = false,
 
         plugin = {"html:target/default-cucumber-reports",
-                "json:target/cucumber.json"}
+                "json:target/cucumber.json",
+                 "rerun:target/rerun.txt"}
 )
 public class RegressionRunner{
 }

@@ -48,8 +48,8 @@ public class MessageStepDefinitions {
 //            e.printStackTrace();
 //        }
         BrowserUtils.wait(3);
-       // messagePage.uploadfiles.sendKeys(System.getProperty("user.dir")+"testfile.txt");
-        messagePage.uploadfiles.sendKeys("C:/Users/dhtor/Desktop/aaaa.txt");
+        messagePage.uploadfiles.sendKeys(System.getProperty("user.dir")+"/testfile.txt");
+       // messagePage.uploadfiles.sendKeys("C:/Users/dhtor/Desktop/aaaa.txt");
         BrowserUtils.wait(3);
     }
 
