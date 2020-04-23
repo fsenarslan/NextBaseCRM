@@ -12,6 +12,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
@@ -54,11 +55,13 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M3</version>
                 <configuration>
+                    <runOrder>alphabetical</runOrder>
                     <includes>
                         <include>**/CucumberRunner.java</include>
+                        <include>**/FailedRunner.java</include>
                     </includes>
-                    <rerunFailingTestsCount>1</rerunFailingTestsCount>
-                    <testFailureIgnore>false</testFailureIgnore>
+<!--                    <rerunFailingTestsCount>1</rerunFailingTestsCount>-->
+                    <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
             <plugin>
