@@ -7,12 +7,14 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = "com\\nextbase\\step_definitions",
+        glue = "com/nextbase/step_definitions",
 
         dryRun = false,
 
         plugin = {"html:target/default-cucumber-reports",
-                "json:target/cucumber.json"}
+                "json:target/cucumber.json",
+                "rerun:target/rerun.txt"
+        }
 )
 public class RegressionRunner{
 }
