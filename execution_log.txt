@@ -1,0 +1,37 @@
+INFO    2020-04-24 14:44:49,822 [main] com.nextbase.step_definitions.Hook  - ===============================
+INFO    2020-04-24 14:44:49,824 [main] com.nextbase.step_definitions.Hook  - Test setup
+INFO    2020-04-24 14:44:49,828 [main] com.nextbase.utilities.Driver  - TRYING TO CREATE DRIVER
+INFO    2020-04-24 14:44:56,027 [main] com.nextbase.step_definitions.LoginStepDefinition  - User is on the login page
+INFO    2020-04-24 14:44:56,758 [main] com.nextbase.step_definitions.LoginStepDefinition  - User logs in as aHuman Resources
+INFO    2020-04-24 14:44:59,747 [main] com.nextbase.step_definitions.LoginStepDefinition  - Verify that page title isPortal
+INFO    2020-04-24 14:44:59,760 [main] com.nextbase.step_definitions.Hook  - Cleanup!
+INFO    2020-04-24 14:44:59,760 [main] com.nextbase.step_definitions.Hook  - Test completed!
+INFO    2020-04-24 14:44:59,760 [main] com.nextbase.step_definitions.Hook  - ===================================
+INFO    2020-04-24 14:45:00,505 [main] com.nextbase.step_definitions.Hook  - ===============================
+INFO    2020-04-24 14:45:00,505 [main] com.nextbase.step_definitions.Hook  - Test setup
+INFO    2020-04-24 14:45:00,505 [main] com.nextbase.utilities.Driver  - TRYING TO CREATE DRIVER
+INFO    2020-04-24 14:45:05,702 [main] com.nextbase.step_definitions.LoginStepDefinition  - User is on the login page
+INFO    2020-04-24 14:45:06,444 [main] com.nextbase.step_definitions.LoginStepDefinition  - User logs in as aHelp Desk
+INFO    2020-04-24 14:45:09,388 [main] com.nextbase.step_definitions.LoginStepDefinition  - Verify that page title isPortal
+INFO    2020-04-24 14:45:09,395 [main] com.nextbase.step_definitions.Hook  - Cleanup!
+INFO    2020-04-24 14:45:09,395 [main] com.nextbase.step_definitions.Hook  - Test completed!
+INFO    2020-04-24 14:45:09,395 [main] com.nextbase.step_definitions.Hook  - ===================================
+INFO    2020-04-24 14:45:10,137 [main] com.nextbase.step_definitions.Hook  - ===============================
+INFO    2020-04-24 14:45:10,137 [main] com.nextbase.step_definitions.Hook  - Test setup
+INFO    2020-04-24 14:45:10,137 [main] com.nextbase.utilities.Driver  - TRYING TO CREATE DRIVER
+INFO    2020-04-24 14:45:15,434 [main] com.nextbase.step_definitions.LoginStepDefinition  - User is on the login page
+INFO    2020-04-24 14:45:16,088 [main] com.nextbase.step_definitions.LoginStepDefinition  - User logs in as aMarketing
+INFO    2020-04-24 14:45:17,425 [main] com.nextbase.step_definitions.LoginStepDefinition  - Verify that page title isAssignments
+INFO    2020-04-24 14:45:17,438 [main] com.nextbase.step_definitions.Hook  - Cleanup!
+INFO    2020-04-24 14:45:17,438 [main] com.nextbase.step_definitions.Hook  - Test completed!
+INFO    2020-04-24 14:45:17,438 [main] com.nextbase.step_definitions.Hook  - ===================================
+INFO    2020-04-24 14:56:02,919 [main] com.nextbase.step_definitions.Hook  - ===============================
+INFO    2020-04-24 14:56:02,920 [main] com.nextbase.step_definitions.Hook  - Test setup
+INFO    2020-04-24 14:56:02,922 [main] com.nextbase.utilities.Driver  - TRYING TO CREATE DRIVER
+INFO    2020-04-24 14:56:09,703 [main] com.nextbase.step_definitions.LoginStepDefinition  - User is on the login page
+INFO    2020-04-24 14:56:10,348 [main] com.nextbase.step_definitions.LoginStepDefinition  - User logs in as Human Resources
+INFO    2020-04-24 14:56:13,151 [main] com.nextbase.step_definitions.MessageSteps.AddMoreStepDefinitions  - user clicks Add more
+INFO    2020-04-24 14:56:15,170 [main] com.nextbase.step_definitions.MessageSteps.AddMoreStepDefinitions  - Verify that options available
+INFO    2020-04-24 14:56:15,226 [main] com.nextbase.step_definitions.Hook  - Cleanup!
+INFO    2020-04-24 14:56:15,226 [main] com.nextbase.step_definitions.Hook  - Test completed!
+INFO    2020-04-24 14:56:15,226 [main] com.nextbase.step_definitions.Hook  - ===================================
