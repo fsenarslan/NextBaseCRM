@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/nextbase/step_definitions",
         dryRun = false,
-        tags = "@login_with_different_credentials",
+        tags = "@add_contacts ",
         plugin = {"html:target/default-cucumber-reports",
                 "json:target/cucumber.json",
                 "rerun:target/rerun.txt"}

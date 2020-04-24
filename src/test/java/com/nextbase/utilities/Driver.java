@@ -1,6 +1,7 @@
 package com.nextbase.utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
@@ -15,13 +16,20 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import java.net.URL;
+
+
 public class Driver {
     private static ThreadLocal<WebDriver> driverPool = new ThreadLocal<>();
+    private static Logger logger = Logger.getLogger(Driver.class);
+
     private Driver() {
     }
+
+
     public static WebDriver get() {
         //if this thread doesn't have a web driver yet - create it and add to pool
         if (driverPool.get() == null) {
+            logger.info("TRYING TO CREATE DRIVER"); //burdaki bilgi bu sayfadaki ozet, baslik ne isteyecek
             // this line will tell which browser should open based on the value from properties file
             String browserParamFromEnv = System.getProperty("browser");
             String browser = browserParamFromEnv == null ? ConfigurationReader.getProperty("browser") : browserParamFromEnv;
@@ -71,6 +79,7 @@ public class Driver {
                         chromeOptions.setCapability("platform", Platform.ANY);
                         driverPool.set(new RemoteWebDriver(new URL("http://ec2-3-83-84-96.compute-1.amazonaws.com:4444/wd/hub"), chromeOptions));
                     } catch (Exception e) {
+                        logger.error(e.getMessage());
                         e.printStackTrace();
                     }
                     break;
@@ -84,6 +93,7 @@ public class Driver {
                     }
                     break;
                 default:
+                    logger.error("Invalid browser?");
                     throw new RuntimeException("Invalid browser name!");
             }
         }

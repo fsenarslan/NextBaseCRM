@@ -47,6 +47,13 @@
             <artifactId>javafaker</artifactId>
             <version>1.0.1</version>
         </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>
@@ -71,8 +78,7 @@
                     <testFailureIgnore>false</testFailureIgnore>
                 </configuration>
             </plugin>
-
-        <!--    <plugin>
+          <!--  <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
                 <version>4.9.0</version>
@@ -114,9 +120,30 @@
                             <includes>
                                 <include>**/RegressionRunner.java</include>
                             </includes>
-                            <testFailureIgnore>true</testFailureIgnore>
                             <testFailureIgnore>true</testFailureIgnore>  <!--burasi false olunca regression build success olmuyor eger fail olan test olursa     -->
                         </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>net.masterthought</groupId>
+                        <artifactId>maven-cucumber-reporting</artifactId>
+                        <version>4.9.0</version>
+                        <executions>
+                            <execution>
+                                <id>execution</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>generate</goal>
+                                </goals>
+                                <configuration>
+                                    <projectName>Cucumber HTML Reports</projectName>
+                                    <outputDirectory>${project.build.directory}</outputDirectory>
+                                    <inputDirectory>${project.build.directory}</inputDirectory>
+                                    <jsonFiles>
+                                        <param>**/cucumber*.json</param>
+                                    </jsonFiles>
+                                </configuration>
+                            </execution>
+                        </executions>
                     </plugin>
 
                      <plugin>
