@@ -1,4 +1,4 @@
-@Menu_Items
+@smoke_test
 Feature: Page SubTitle
 
   Scenario Outline: Login as <role> and verify page SubTitle
