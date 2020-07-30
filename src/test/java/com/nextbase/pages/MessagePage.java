@@ -3,14 +3,18 @@ package com.nextbase.pages;
 import com.nextbase.utilities.BrowserUtils;
 import com.nextbase.utilities.Driver;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
-public class MessagePage {
+public class MessagePage extends BasePage {
+
 
     @FindBy(css = ".feed-add-post-form-link.feed-add-post-form-link-active")
     public WebElement messageButton;
@@ -36,7 +40,54 @@ public class MessagePage {
     @FindBy(xpath = "//span[@class='f-wrap']")
     public WebElement file;
 
-    //file upload element
+    @FindBy(xpath = "//span[contains(text(),'My Drive')]")
+    public WebElement myDriveButton;
+
+    @FindBy(css = "[class=\"bx-file-dialog-content-link bx-file-dialog-icon bx-file-dialog-icon-folder\"]")
+    public WebElement uploadFolder;
+
+    @FindBy(xpath = "//a[@class='bx-file-dialog-content-link bx-file-dialog-icon bx-file-dialog-icon-file'][contains(text(),'resume.txt')]")
+    public WebElement resumeButton;
+
+    @FindBy(css = "[class=\"popup-window-button popup-window-button-accept\"]")
+    public WebElement selectDocumentButtonBtrix;
+
+    @FindBy(xpath = "//div[@class='feed-wrap']/child::div[@class='feed-item-wrap'][1]/child::div[@class='feed-post-block feed-post-block-files feed-post-block-separator feed-post-block-short']")
+    public WebElement messageselectDocumentBtrix;
+
+    @FindBy(xpath = "//span[contains(text(),'Sales and marketing')]")
+    public WebElement salesAndMarketin;
+
+    @FindBy(xpath = "//a[contains(text(),'Marketing and advertising')]")
+    public WebElement marketingAndAdvertising;
+
+    @FindBy(css = "[class=\"bx-file-dialog-content-link bx-file-dialog-icon bx-file-dialog-icon-file\"]")
+    public WebElement logoPdf;//a[contains(text(),'Quotes')]
+
+    @FindBy(xpath = "//a[contains(text(),'Quotes')]")
+    public WebElement quotesLink;
+
+    @FindBy(css = "[class=\"bx-file-dialog-content-link bx-file-dialog-icon bx-file-dialog-icon-file\"]")
+    public WebElement quoteDocx;
+
+    @FindBy(css = "//div[@class='ui-notification-balloon-actions']")
+    public WebElement boloonMessage;
+
+//    @FindBy(xpath = "//div[@class='bx-file-dialog-tab-group']")
+//    public List<WebElement> selectExternalDrive;
+
+    @FindBy(xpath = "//div[@class='bx-file-dialog-tab-group']")
+    public WebElement selectExternalDrive;
+
+    @FindBy(xpath = "//div[@class='feed-add-post-form-wrap']//td[3]//span[1]//span[1]//span[2]//a[1]")
+    public WebElement createGoogleDocsDocument;
+
+    @FindBy( xpath = "/html/body/div[2]/div/span/text()")
+    public WebElement getCreateGoogleDocsDocumentPopPageText;
+
+
+
+    //add link element//span[contains(text(),'My Drive')]
 
     @FindBy(css = "[title=\"Link\"]")
     public WebElement linkButton;
@@ -97,7 +148,7 @@ public class MessagePage {
     @FindBy(css = "(//div[@class='feed-add-post-text'])[1]")
     public WebElement verifyVideo;
 
-    @FindBy(xpath = "//label[.='Video title:']")
+    @FindBy(xpath = "//label[contains(text(),'Video size:')]")
     public WebElement videoTitle;
 
    //Quate elements
@@ -138,12 +189,16 @@ public class MessagePage {
     public WebElement emailPopUpClose;
 
 
+    ///////////video Record ////////////////
 
+    @FindBy(xpath = "//div[@id='divoPostFormLHE_blogPostForm']//span[@class='feed-add-post-form-but-cnt feed-add-videomessage'][contains(text(),'Record Video')]")
+    public WebElement videoRecordButton;
 
+    @FindBy(css = "[class=\"popup-window-button popup-window-button-blue\"]")
+    public WebElement allowVideoRecordButton;
 
-
-
-
+    @FindBy(id = "popup-window-content-bx-popup-videomessage-popup")
+    public WebElement videoRecordFailsText;
 
 
 //div[contains(text(),'Cyber Vet')]
@@ -169,6 +224,8 @@ public class MessagePage {
         BrowserUtils.waitForClickablility(fileUploadButton, 5);
         fileUploadButton.click();
     }
+
+
 //Text Editor
      @FindBy(css="[id=\"lhe_button_editor_blogPostForm\"]")
      public WebElement editorButton;

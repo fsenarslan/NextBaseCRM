@@ -2,9 +2,16 @@ package com.nextbase.step_definitions.MessageSteps;
 
 import com.nextbase.pages.MessagePage;
 import com.nextbase.utilities.BrowserUtils;
+import com.nextbase.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+
+import java.time.Duration;
+import java.util.function.Function;
 
 public class InsertVideoStepDefinitions {
 
@@ -27,6 +34,12 @@ public class InsertVideoStepDefinitions {
         //   BrowserUtils.waitForPresenceOfElement(By.cssSelector("input[xpath=\"1\"]"),20);
         BrowserUtils.wait(20);
         messagePage.videoSaveButton.click();
+    }
+
+    @When("user clicks the send button")
+    public void user_clicks_the_send_button() {
+        messagePage.sendButton.click();
+        BrowserUtils.wait(5);
     }
 
     @Then("verify that video URL is entered")
