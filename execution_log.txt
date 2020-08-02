@@ -1,0 +1,10 @@
+INFO    2020-04-24 18:04:12,186 [main] com.nextbase.step_definitions.Hook  - ===============================
+INFO    2020-04-24 18:04:12,197 [main] com.nextbase.step_definitions.Hook  - Test setup
+INFO    2020-04-24 18:04:12,201 [main] com.nextbase.utilities.Driver  - TRYING TO CREATE DRIVER
+INFO    2020-04-24 18:04:19,842 [main] com.nextbase.step_definitions.LoginStepDefinition  - User is on the login page
+INFO    2020-04-24 18:04:21,445 [main] com.nextbase.step_definitions.LoginStepDefinition  - User logs in as Human Resources
+INFO    2020-04-24 18:04:26,839 [main] com.nextbase.step_definitions.MessageSteps.AddMoreStepDefinitions  - user clicks Add more
+INFO    2020-04-24 18:04:30,702 [main] com.nextbase.step_definitions.MessageSteps.AddMoreStepDefinitions  - Verify that options available
+INFO    2020-04-24 18:04:31,122 [main] com.nextbase.step_definitions.Hook  - Cleanup!
+INFO    2020-04-24 18:04:31,124 [main] com.nextbase.step_definitions.Hook  - Test completed!
+INFO    2020-04-24 18:04:31,126 [main] com.nextbase.step_definitions.Hook  - ===================================
