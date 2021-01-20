@@ -29,5 +29,7 @@ public class AddMoreStepDefinitions {
             Assert.assertEquals(dataTable.get(i),each.getText());
             i+=1;
         }
+        System.out.println("It should print Recent: "+dataTable.get(0));
+        System.out.println("It should print E-mail users: "+dataTable.get(2));
     }
 }

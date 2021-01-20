@@ -1,3 +1,5 @@
 [0408/101404.311:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
 [0420/182637.273:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
 [0420/182750.547:ERROR:prune_crash_reports.cc(35)] PruneCrashReportDatabase: Failed to get pending reports
+[0622/024334.702:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0622/024334.708:ERROR:exception_snapshot_win.cc(98)] thread ID 12404 not found in process
